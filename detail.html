@@ -1,4 +1,4 @@
-
+detail.html
 
 <!DOCTYPE html> <html lang="id"> <head>
 <meta charset="UTF-8">
@@ -362,48 +362,3 @@
 
 </div>
 </body> </html>
-
-index.html
-
-<!DOCTYPE html> <html lang="id"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tips Mengurangi Efek Rumah Kaca</title>
-
-<link rel="stylesheet"
-      href="{{ url_for('static', filename='style.css') }}">
-</head> <body>
-<div class="container">
-
-    <h1>🌍 Tips Mengurangi Efek Rumah Kaca</h1>
-
-    <p class="subtitle">
-        Klik salah satu tips untuk melihat penjelasan lengkap.
-    </p>
-
-
-    {% for tip in tips %}
-
-    <a href="{{ url_for('detail', index=loop.index0) }}"
-       class="tip">
-
-        {% if tip.judul == "Hemat Listrik" %}
-
-            <img src="{{ url_for('static',
-                 filename='images/listrik.jpg') }}"
-                 alt="Hemat Listrik">
-
-        {% elif tip.judul == "Gunakan Transportasi Ramah Lingkungan" %}
-
-            <img src="{{ url_for('static',
-                 filename='images/transportasi.jpg') }}"
-                 alt="Transportasi Ramah Lingkungan">
-
-        {% elif tip.judul == "Kurangi Sampah" %}
-
-            <img src="{{ url_for('static',
-                 filename='images/sampah.jpg') }}"
-                 alt="Kurangi Sampah">
-
-        {% elif tip.judul == "Menanam Pohon" %}
-
-            <img src="{{ url_for('static',
-                 filename='images/pohon.jpg')
