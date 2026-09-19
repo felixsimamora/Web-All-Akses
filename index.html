@@ -1,0 +1,161 @@
+
+
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Tips Mengurangi Efek Rumah Kaca</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+```
+
+</head>
+
+<body>
+
+```
+<!-- HERO SECTION -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="hero-icon">🌍</div>
+
+        <p class="hero-label">PEDULI LINGKUNGAN</p>
+
+        <h1>
+            Tips Mengurangi<br>
+            <span>Efek Rumah Kaca</span>
+        </h1>
+
+        <p class="hero-description">
+            Kebiasaan kecil yang kita lakukan setiap hari
+            dapat membantu menjaga bumi tetap sehat dan nyaman.
+        </p>
+
+        <a href="#tips" class="hero-button">
+            🌱 Lihat Tips
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- INTRO -->
+<section class="intro" id="tips">
+
+    <p class="section-label">🌿 MULAI DARI SEKARANG</p>
+
+    <h2>
+        5 Kebiasaan Sederhana
+        untuk Bumi yang Lebih Baik
+    </h2>
+
+    <p>
+        Pilih salah satu tips di bawah ini untuk mengetahui
+        penjelasan dan cara menerapkannya dalam kehidupan sehari-hari.
+    </p>
+
+</section>
+
+
+<!-- DAFTAR TIPS -->
+<div class="tips-container">
+
+    {% for tip in tips %}
+
+    <a href="{{ url_for('detail', index=loop.index0) }}"
+       class="tip">
+
+        <div class="tip-image">
+
+            {% if tip.judul == "Hemat Listrik" %}
+
+                <img src="{{ url_for('static',
+                     filename='images/listrik.jpg') }}"
+                     alt="Hemat Listrik">
+
+                <div class="tip-number">01</div>
+
+            {% elif tip.judul == "Gunakan Transportasi Ramah Lingkungan" %}
+
+                <img src="{{ url_for('static',
+                     filename='images/transportasi.jpg') }}"
+                     alt="Transportasi Ramah Lingkungan">
+
+                <div class="tip-number">02</div>
+
+            {% elif tip.judul == "Kurangi Sampah" %}
+
+                <img src="{{ url_for('static',
+                     filename='images/sampah.jpg') }}"
+                     alt="Kurangi Sampah">
+
+                <div class="tip-number">03</div>
+
+            {% elif tip.judul == "Menanam Pohon" %}
+
+                <img src="{{ url_for('static',
+                     filename='images/pohon.jpg') }}"
+                     alt="Menanam Pohon">
+
+                <div class="tip-number">04</div>
+
+            {% elif tip.judul == "Hemat Air" %}
+
+                <img src="{{ url_for('static',
+                     filename='images/air.jpg') }}"
+                     alt="Hemat Air">
+
+                <div class="tip-number">05</div>
+
+            {% endif %}
+
+        </div>
+
+
+        <div class="tip-content">
+
+            <h2>{{ tip.judul }}</h2>
+
+            <p>{{ tip.isi }}</p>
+
+            <div class="tip-link">
+                Lihat penjelasan
+                <span>→</span>
+            </div>
+
+        </div>
+
+    </a>
+
+    {% endfor %}
+
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+
+    <div class="footer-icon">🌱</div>
+
+    <h3>Jaga Bumi, Mulai dari Diri Sendiri</h3>
+
+    <p>
+        Setiap tindakan kecil dapat memberikan dampak
+        bagi lingkungan.
+    </p>
+
+</footer>
+```
+
+</body>
+
+</html>
