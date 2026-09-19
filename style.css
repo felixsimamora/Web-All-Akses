@@ -1,0 +1,545 @@
+
+
+** {
+  box-sizing: border-box;
+  }
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, sans-serif;
+margin: 0;
+color: #26382a;
+
+
+background:
+    linear-gradient(
+        135deg,
+        #e9f8ed,
+        #d5f0dc,
+        #f7fff8
+    );
+
+min-height: 100vh;
+
+
+}
+
+/* =========================
+HERO
+========================= */
+
+.hero {
+min-height: 570px;
+
+
+display: flex;
+justify-content: center;
+align-items: center;
+
+text-align: center;
+
+padding: 70px 20px;
+
+background:
+    linear-gradient(
+        rgba(20, 83, 45, 0.82),
+        rgba(25, 110, 60, 0.78)
+    ),
+    url("/static/images/pohon.jpg");
+
+background-size: cover;
+background-position: center;
+
+position: relative;
+
+
+}
+
+.hero-content {
+max-width: 800px;
+color: white;
+
+
+animation: fadeUp 0.8s ease;
+
+
+}
+
+.hero-icon {
+font-size: 70px;
+margin-bottom: 10px;
+}
+
+.hero-label {
+font-size: 14px;
+font-weight: bold;
+letter-spacing: 4px;
+
+
+margin-bottom: 15px;
+opacity: 0.9;
+
+
+}
+
+.hero h1 {
+font-size: 58px;
+line-height: 1.1;
+
+
+margin: 0 0 25px;
+
+color: white;
+
+
+}
+
+.hero h1 span {
+color: #c8f7d1;
+}
+
+.hero-description {
+max-width: 650px;
+
+
+margin: 0 auto 30px;
+
+font-size: 19px;
+line-height: 1.7;
+
+color: #f0fff3;
+
+
+}
+
+.hero-button {
+display: inline-block;
+
+
+padding: 15px 32px;
+
+background: white;
+color: #1b6b36;
+
+text-decoration: none;
+
+border-radius: 50px;
+
+font-weight: bold;
+font-size: 16px;
+
+box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.18);
+
+transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+
+
+}
+
+.hero-button:hover {
+transform: translateY(-4px);
+
+
+box-shadow:
+    0 12px 25px rgba(0, 0, 0, 0.25);
+
+
+}
+
+/* =========================
+INTRO
+========================= */
+
+.intro {
+max-width: 850px;
+
+
+margin: 80px auto 40px;
+
+padding: 0 25px;
+
+text-align: center;
+
+
+}
+
+.section-label {
+color: #399052;
+
+
+font-size: 13px;
+
+font-weight: bold;
+
+letter-spacing: 3px;
+
+margin-bottom: 12px;
+
+
+}
+
+.intro h2 {
+font-size: 38px;
+
+
+color: #174d29;
+
+margin: 0 auto 15px;
+
+line-height: 1.2;
+
+
+}
+
+.intro > p:last-child {
+max-width: 650px;
+
+
+margin: auto;
+
+color: #617066;
+
+font-size: 17px;
+
+line-height: 1.7;
+
+
+}
+
+/* =========================
+TIPS CONTAINER
+========================= */
+
+.tips-container {
+max-width: 1100px;
+
+
+margin: 0 auto 80px;
+
+padding: 0 25px;
+
+display: grid;
+
+grid-template-columns:
+    repeat(2, 1fr);
+
+gap: 25px;
+
+
+}
+
+/* =========================
+KARTU
+========================= */
+
+.tip {
+display: block;
+
+
+text-decoration: none;
+
+color: inherit;
+
+background: white;
+
+border-radius: 20px;
+
+overflow: hidden;
+
+box-shadow:
+    0 8px 25px rgba(30, 80, 45, 0.10);
+
+transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+
+}
+
+.tip:hover {
+transform: translateY(-8px);
+
+
+box-shadow:
+    0 18px 35px rgba(30, 80, 45, 0.18);
+
+
+}
+
+/* =========================
+GAMBAR
+========================= */
+
+.tip-image {
+height: 230px;
+
+
+position: relative;
+
+overflow: hidden;
+
+
+}
+
+.tip-image img {
+width: 100%;
+height: 100%;
+
+
+display: block;
+
+object-fit: cover;
+
+transition:
+    transform 0.5s ease;
+
+
+}
+
+.tip:hover .tip-image img {
+transform: scale(1.07);
+}
+
+/* =========================
+NOMOR
+========================= */
+
+.tip-number {
+position: absolute;
+
+
+top: 15px;
+left: 15px;
+
+background: rgba(255, 255, 255, 0.92);
+
+color: #24753b;
+
+width: 48px;
+height: 48px;
+
+display: flex;
+
+align-items: center;
+justify-content: center;
+
+border-radius: 50%;
+
+font-size: 13px;
+
+font-weight: bold;
+
+box-shadow:
+    0 4px 10px rgba(0, 0, 0, 0.12);
+
+
+}
+
+/* =========================
+ISI KARTU
+========================= */
+
+.tip-content {
+padding: 25px;
+}
+
+.tip-content h2 {
+color: #216b35;
+
+
+font-size: 23px;
+
+line-height: 1.3;
+
+margin: 0 0 12px;
+
+
+}
+
+.tip-content p {
+color: #59645d;
+
+
+font-size: 15px;
+
+line-height: 1.7;
+
+margin: 0 0 20px;
+
+
+}
+
+.tip-link {
+color: #2f8a48;
+
+
+font-weight: bold;
+
+font-size: 14px;
+
+display: flex;
+
+align-items: center;
+
+gap: 8px;
+
+
+}
+
+.tip-link span {
+font-size: 20px;
+
+
+transition:
+    transform 0.2s;
+
+
+}
+
+.tip:hover .tip-link span {
+transform: translateX(5px);
+}
+
+/* =========================
+KARTU TERAKHIR
+========================= */
+
+.tip:last-child {
+grid-column: 1 / -1;
+
+
+max-width: 530px;
+
+width: 100%;
+
+justify-self: center;
+
+
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer {
+background: #174d29;
+
+
+color: white;
+
+text-align: center;
+
+padding: 55px 20px;
+
+
+}
+
+.footer-icon {
+font-size: 40px;
+
+
+margin-bottom: 10px;
+
+
+}
+
+footer h3 {
+font-size: 24px;
+
+
+margin: 0 0 10px;
+
+
+}
+
+footer p {
+color: #d6edda;
+
+
+margin: 0;
+
+line-height: 1.6;
+
+
+}
+
+/* =========================
+ANIMASI
+========================= */
+
+@keyframes fadeUp {
+
+
+from {
+    opacity: 0;
+    transform: translateY(25px);
+}
+
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+
+.hero {
+    min-height: 520px;
+}
+
+
+.hero h1 {
+    font-size: 40px;
+}
+
+
+.hero-description {
+    font-size: 16px;
+}
+
+
+.hero-icon {
+    font-size: 55px;
+}
+
+
+.intro {
+    margin-top: 55px;
+}
+
+
+.intro h2 {
+    font-size: 30px;
+}
+
+
+.tips-container {
+    grid-template-columns: 1fr;
+}
+
+
+.tip:last-child {
+    grid-column: auto;
+
+    max-width: none;
+}
+
+
+.tip-image {
+    height: 210px;
+}
+
+
+}
