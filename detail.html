@@ -1,0 +1,409 @@
+
+
+<!DOCTYPE html> <html lang="id"> <head>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>{{ tip.judul }}</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container detail">
+
+
+    <!-- GAMBAR SESUAI TOPIK -->
+
+    {% if tip.judul == "Hemat Listrik" %}
+
+        <img class="detail-image"
+             src="{{ url_for('static',
+             filename='images/listrik.jpg') }}"
+             alt="Hemat Listrik">
+
+    {% elif tip.judul == "Gunakan Transportasi Ramah Lingkungan" %}
+
+        <img class="detail-image"
+             src="{{ url_for('static',
+             filename='images/transportasi.jpg') }}"
+             alt="Transportasi Ramah Lingkungan">
+
+    {% elif tip.judul == "Kurangi Sampah" %}
+
+        <img class="detail-image"
+             src="{{ url_for('static',
+             filename='images/sampah.jpg') }}"
+             alt="Kurangi Sampah">
+
+    {% elif tip.judul == "Menanam Pohon" %}
+
+        <img class="detail-image"
+             src="{{ url_for('static',
+             filename='images/pohon.jpg') }}"
+             alt="Menanam Pohon">
+
+    {% elif tip.judul == "Hemat Air" %}
+
+        <img class="detail-image"
+             src="{{ url_for('static',
+             filename='images/air.jpg') }}"
+             alt="Hemat Air">
+
+    {% endif %}
+
+
+
+    <!-- HEMAT LISTRIK -->
+
+    {% if tip.judul == "Hemat Listrik" %}
+
+        <h1>💡 Hemat Listrik</h1>
+
+        <p class="subtitle">
+            Cara menghemat energi listrik dalam kehidupan sehari-hari.
+        </p>
+
+
+        <div class="detail-box">
+
+            <h2>1. Menghilangkan Daya Siluman</h2>
+
+            <p>
+                Perangkat elektronik yang tetap terhubung ke aliran
+                listrik saat mati masih dapat mengonsumsi energi.
+                Memutuskan sambungan secara total dapat mengurangi
+                konsumsi daya pasif.
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h2>2. Efisiensi Pencahayaan</h2>
+
+            <p>
+                Menggunakan lampu hemat energi seperti LED dapat
+                mengurangi penggunaan listrik karena energi yang
+                digunakan lebih banyak diubah menjadi cahaya.
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h2>3. Mengatur Penggunaan AC</h2>
+
+            <p>
+                Mengatur suhu AC pada tingkat yang wajar dapat
+                mengurangi kerja kompresor sehingga penggunaan
+                energi listrik menjadi lebih rendah.
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h2>4. Menggunakan Perangkat Inverter</h2>
+
+            <p>
+                Perangkat dengan teknologi inverter dapat menyesuaikan
+                penggunaan daya sesuai kebutuhan sehingga tidak selalu
+                menggunakan daya penuh.
+            </p>
+
+        </div>
+
+
+
+    <!-- TRANSPORTASI -->
+
+    {% elif tip.judul == "Gunakan Transportasi Ramah Lingkungan" %}
+
+        <h1>🚲 Gunakan Transportasi Ramah Lingkungan</h1>
+
+        <p class="subtitle">
+            Pilihan transportasi yang lebih ramah terhadap lingkungan.
+        </p>
+
+
+        <div class="detail-box">
+
+            <h2>1. Berjalan Kaki dan Bersepeda</h2>
+
+            <p>
+                Berjalan kaki dan bersepeda tidak menghasilkan emisi
+                langsung dari kendaraan sehingga cocok untuk perjalanan
+                jarak pendek.
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h2>2. Menggunakan Transportasi Publik</h2>
+
+            <p>
+                Transportasi umum dapat membawa banyak penumpang
+                sekaligus sehingga emisi yang dihasilkan per orang
+                dapat lebih rendah dibandingkan kendaraan pribadi.
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h2>3. Menggunakan Kendaraan Listrik</h2>
+
+            <p>
+                Kendaraan listrik tidak menghasilkan emisi gas buang
+                secara langsung ketika digunakan. Dampaknya akan semakin
+                baik jika listrik berasal dari energi terbarukan.
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h2>4. Eco-Driving</h2>
+
+            <p>
+                Menjaga kecepatan tetap stabil dan menghindari
+                percepatan mendadak dapat membantu menghemat bahan
+                bakar dan mengurangi emisi kendaraan.
+            </p>
+
+        </div>
+
+
+
+    <!-- KURANGI SAMPAH -->
+
+    {% elif tip.judul == "Kurangi Sampah" %}
+
+        <h1>♻️ Kurangi Sampah</h1>
+
+        <p class="subtitle">
+            Mengurangi sampah membantu menghemat sumber daya
+            dan menekan emisi.
+        </p>
+
+
+        <div class="detail-box">
+
+            <h2>1. Reduce</h2>
+
+            <p>
+                Mengurangi penggunaan barang sekali pakai dapat
+                mengurangi kebutuhan produksi barang baru sehingga
+                penggunaan energi dan emisi industri juga dapat berkurang.
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h2>2. Mengolah Sampah Organik</h2>
+
+            <p>
+                Sisa makanan dan sampah organik dapat diolah menjadi
+                kompos. Cara ini membantu mengurangi sampah organik
+                yang menumpuk di tempat pembuangan akhir.
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h2>3. Reuse dan Recycle</h2>
+
+            <p>
+                Menggunakan kembali barang dan mendaur ulang material
+                dapat mengurangi kebutuhan bahan baku baru serta
+                menghemat energi.
+            </p>
+
+        </div>
+
+
+
+    <!-- MENANAM POHON -->
+
+    {% elif tip.judul == "Menanam Pohon" %}
+
+        <h1>🌳 Menanam Pohon</h1>
+
+        <p class="subtitle">
+            Pohon membantu menyerap karbon dan menjaga lingkungan
+            tetap sejuk.
+        </p>
+
+
+        <div class="detail-box">
+
+            <h2>1. Menyerap Karbon Dioksida</h2>
+
+            <p>
+                Pohon menyerap karbon dioksida dari udara melalui
+                fotosintesis. Karbon kemudian disimpan dalam batang,
+                daun, dahan, dan akar.
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h2>2. Menyimpan Karbon di Tanah</h2>
+
+            <p>
+                Akar dan bahan organik dari tanaman dapat membantu
+                menyimpan karbon di dalam tanah dalam jangka waktu
+                yang panjang.
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h2>3. Membuat Lingkungan Lebih Sejuk</h2>
+
+            <p>
+                Pohon memberikan naungan dan melepaskan uap air melalui
+                transpirasi. Hal tersebut dapat membantu menurunkan
+                suhu di lingkungan sekitar.
+            </p>
+
+        </div>
+
+
+
+    <!-- HEMAT AIR -->
+
+    {% elif tip.judul == "Hemat Air" %}
+
+        <h1>💧 Hemat Air</h1>
+
+        <p class="subtitle">
+            Menghemat air juga membantu mengurangi penggunaan energi
+            dan emisi gas rumah kaca.
+        </p>
+
+
+        <div class="detail-box">
+
+            <h2>1. Mengurangi Energi Pemompaan Air</h2>
+
+            <p>
+                Air bersih perlu dipompa dari fasilitas pengolahan
+                menuju berbagai tempat. Mengurangi konsumsi air dapat
+                membantu mengurangi energi yang diperlukan untuk
+                pemompaan dan distribusi.
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h2>2. Mengurangi Pengolahan Air Limbah</h2>
+
+            <p>
+                Air yang digunakan akan menjadi air limbah yang perlu
+                diolah. Menggunakan air secara efisien dapat mengurangi
+                jumlah air limbah yang harus diproses.
+            </p>
+
+        </div>
+
+
+        <div class="detail-box">
+
+            <h2>3. Menghemat Energi Pemanas Air</h2>
+
+            <p>
+                Air panas membutuhkan energi untuk dipanaskan.
+                Menggunakan air panas secara bijak dapat mengurangi
+                kebutuhan energi listrik atau gas.
+            </p>
+
+        </div>
+
+
+
+    <!-- JIKA TIDAK ADA DETAIL -->
+
+    {% else %}
+
+        <h1>{{ tip.judul }}</h1>
+
+        <p class="detail-text">
+            {{ tip.isi }}
+        </p>
+
+    {% endif %}
+
+
+
+    <a href="/" class="back-button">
+        ⬅️ Kembali ke halaman utama
+    </a>
+
+</div>
+</body> </html>
+
+index.html
+
+<!DOCTYPE html> <html lang="id"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tips Mengurangi Efek Rumah Kaca</title>
+
+<link rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}">
+</head> <body>
+<div class="container">
+
+    <h1>🌍 Tips Mengurangi Efek Rumah Kaca</h1>
+
+    <p class="subtitle">
+        Klik salah satu tips untuk melihat penjelasan lengkap.
+    </p>
+
+
+    {% for tip in tips %}
+
+    <a href="{{ url_for('detail', index=loop.index0) }}"
+       class="tip">
+
+        {% if tip.judul == "Hemat Listrik" %}
+
+            <img src="{{ url_for('static',
+                 filename='images/listrik.jpg') }}"
+                 alt="Hemat Listrik">
+
+        {% elif tip.judul == "Gunakan Transportasi Ramah Lingkungan" %}
+
+            <img src="{{ url_for('static',
+                 filename='images/transportasi.jpg') }}"
+                 alt="Transportasi Ramah Lingkungan">
+
+        {% elif tip.judul == "Kurangi Sampah" %}
+
+            <img src="{{ url_for('static',
+                 filename='images/sampah.jpg') }}"
+                 alt="Kurangi Sampah">
+
+        {% elif tip.judul == "Menanam Pohon" %}
+
+            <img src="{{ url_for('static',
+                 filename='images/pohon.jpg')
